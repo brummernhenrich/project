@@ -50,6 +50,7 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
+  theme(legend.position = c(.1, .9)) +
   NULL
 ```
 
@@ -59,6 +60,21 @@ A code chunk is for longer code/output:
 with(mtcars, plot(hp, mpg))
 ```
 
+```{r}
+with(iris, plot(Sepal.Length, Sepal.Width))
+```
+
 Inline code is for single numbers/short text:
 
+The mean sepal length is `r with(iris, mean(Sepal.Length))`.
+
 We have `32` cars.
++++
+
+
+
+
+
+
+
+
